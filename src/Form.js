@@ -30,7 +30,9 @@ const renderHobbies = ({ fields }) => (
           type="button"
           title="Remove Hobby"
           onClick={() => fields.remove(index)}
-        />
+        >
+          Remove Hobby
+        </button>
         <Field
           name={hobby}
           type="text"
@@ -58,7 +60,9 @@ const renderMembers = ({ fields }) => (
           type="button"
           title="Remove Member"
           onClick={() => fields.remove(index)}
-        />
+        >
+          Remove
+        </button>
         <h4>Member # {index + 1}</h4>
         <Field
           name={`${member}.firstName`}
@@ -83,7 +87,6 @@ const renderMembers = ({ fields }) => (
 
 const Form = props => {
   const { handleSubmit, reset } = props
-  console.log(props)
 
   return (
     <>

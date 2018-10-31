@@ -1,10 +1,23 @@
 const initState = {
-  items: []
+  items: [
+    {
+      clubName: "Sky",
+      members: [
+        {
+          firstName: "kevin",
+          lastName: "anantha",
+          hobbies: [
+            "a"
+          ]
+        }
+      ]
+    }
+  ]
 }
 
 const itemReducer = (state = initState, action) => {
+  console.log(state.items)
   if (action.type === "CREATE_ITEM") {
-    console.log(action.payload)
     const newitem = action.payload
     const items = [...state.items, newitem]
     return {...state, items}

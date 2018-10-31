@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import './App.css'
 import Form from './Form'
+import Item from './Item'
 
 import * as itemActions from './actions/itemActions.js'
 
@@ -14,10 +15,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="App">
         <Form onSubmit={this.handleCreateItem}/>
+        <Item />
       </div>
     );
   }
